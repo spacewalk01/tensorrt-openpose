@@ -11,6 +11,7 @@ This repo provides an implementation for human pose detection system based on Te
 - TensorRT 7.2.1.6
 - CUDA 11.1, Cudnn 8
 - Python 3.7
+- Torch 1.8.1
 
 ## Installation
 
