@@ -1,5 +1,5 @@
 # Human pose detection 
-This repo provides an implementation for human pose detection system based on TensorRT framework that runs on Windows Machine. It is based on pose detection program [1] developed by NVIDIA. Pose detection model runs at up to about 500fps on RTX-3070 GPU with 224x224 ResNet input size.
+This repo provides an implementation for human pose detection system based on TensorRT framework that runs on Windows Machine. It is based on [pose detection](https://github.com/NVIDIA-AI-IOT/trt_pose) program developed by NVIDIA. Pose detection model runs at up to about 500fps on RTX-3070 GPU with 224x224 ResNet input size.
 
 ![example-gif-1](results/test1.gif)
 ![example-gif-2](results/test2.gif)
@@ -41,6 +41,6 @@ python convert2onnx.py -i resnet18_baseline_att_224x224_A_epoch_249.pth -o trt_p
 - Open the solution with Visual Studio. Select `x64` and `Release` for the configuration and start building the project. 
 
 ## References
-  - [1] https://github.com/NVIDIA-AI-IOT/trt_pose - Real-time pose estimation (Python and C++)
-  - [2] https://github.com/CaoWGG/TensorRT-YOLOv4 - Object detection based on Tensorrt (C++)
+  - https://github.com/NVIDIA-AI-IOT/trt_pose - Real-time pose estimation (Python and C++)
+  - https://github.com/CaoWGG/TensorRT-YOLOv4 - Object detection based on Tensorrt (C++)
 
