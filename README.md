@@ -21,13 +21,13 @@ This repo provides an implementation for human pose detection system based on Te
 move <TensorRT_Installpath>/lib/*.dll C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.1\bin
 ```
 
-- Install [trt_pose](http://pytorch.org/) for parsing the trained pytorch model to an onnx graph model.
+- Install [trt_pose](https://github.com/NVIDIA-AI-IOT/trt_pose) for parsing the trained pytorch model to an onnx graph model. For more information, refer to [trt_pose installation guide] (https://github.com/haotian-liu/yolact_edge/blob/master/INSTALL.md).
 ```
 git clone https://github.com/NVIDIA-AI-IOT/trt_pose
 cd trt_pose
 python setup.py install
 ```
-- Clone the github repo
+- Clone this github repository 
 ```
 cd ..
 git clone https://github.com/batselem/Human_pose_detection
