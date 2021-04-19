@@ -3,7 +3,7 @@
 ![example-gif-1](results/test1.gif)
 ![example-gif-2](results/test2.gif)
 
-This repo reimplements Openpose model for TensorRT framework on Windows Machine. It modifies pose detection program [1] developed by NVIDIA for Windows TensorRT Version. Pose detection model runs up to 500fps on RTX-3070 GPU with 224x224 ResNet input size. For better accuracy, you need to train the openpose model with a bigger network input.
+This repo reimplements Openpose model for TensorRT framework on Windows Machine. It modifies pose detection program [1] developed by NVIDIA for Windows TensorRT Version. Pose detection model runs at up to 500fps on RTX-3070 GPU with 224x224 ResNet input size. For better accuracy, you need to train the openpose model with a bigger network input.
 
 ## Requirements
 - Windows 10
