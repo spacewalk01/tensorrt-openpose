@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{D3D92279-3D3E-44AD-9E0B-4BAFD1FF65A1}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>trt_demo</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
+    <ProjectName>human_pose_detection</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>false</CLRSupport>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 11.1.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <ExecutablePath>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\lib\x64;C:\TensorRT-7.2.2.3\lib;$(ExecutablePath)</ExecutablePath>
+    <IncludePath>C:\opencv-build\install\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\opencv-build\install\x64\vc15\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>E:\Programs\opencv\build\install\include;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\Programs\opencv\build\install\x64\vc15\lib;$(LibraryPath)</LibraryPath>
+    <ExecutablePath>E:\Programs\TensorRT-7.2.1.6\lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.1\lib\x64;$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\TensorRT-7.2.2.3\include›;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include;C:\TensorRT-7.2.2.3\samples\common;C:\TensorRT-7.2.2.3\samples\common\windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>E:\Program\opencvDir\opencv4\install\x64\vc15\lib\opencv_world451.lib;E:\Program\opencvDir\opencv4\install\x64\vc15\lib\opencv_core451.lib;E:\Program\opencvDir\opencv4\install\x64\vc15\lib\opencv_imgproc451.lib;E:\Program\opencvDir\opencv4\install\x64\vc15\lib\opencv_highgui451.lib;E:\Program\opencvDir\opencv4\install\x64\vc15\lib\opencv_ml451.lib;E:\Program\opencvDir\opencv4\install\x64\vc15\lib\opencv_video451.lib;E:\Program\opencvDir\opencv4\install\x64\vc15\lib\opencv_features2d451.lib;E:\Program\opencvDir\opencv4\install\x64\vc15\lib\opencv_calib3d451.lib;E:\Program\opencvDir\opencv4\install\x64\vc15\lib\opencv_objdetect451.lib;E:\Program\opencvDir\opencv4\install\x64\vc15\lib\opencv_flann451.lib;C:\TensorRT-7.2.2.3\lib\nvinfer.lib;C:\TensorRT-7.2.2.3\lib\nvinfer_plugin.lib;C:\TensorRT-7.2.2.3\lib\nvonnxparser.lib;C:\TensorRT-7.2.2.3\lib\nvparsers.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\lib\x64\cublas.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\lib\x64\cuda.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\lib\x64\cudart.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\lib\x64\cudnn.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\TensorRT-7.2.2.3\samples\common;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;OPENCV;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.1\include;E:\Programs\TensorRT-7.2.1.6\include;E:\Programs\opencv\build\install\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeaderFile />
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>opencv_world450.lib;E:\Programs\TensorRT-7.2.1.6\lib\nvinfer.lib;E:\Programs\TensorRT-7.2.1.6\lib\nvinfer_plugin.lib;E:\Programs\TensorRT-7.2.1.6\lib\nvonnxparser.lib;E:\Programs\TensorRT-7.2.1.6\lib\nvparsers.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.1\lib\x64\cublas.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.1\lib\x64\cuda.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.1\lib\x64\cudart.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.1\lib\x64\cudnn.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:\Programs\TensorRT-7.2.1.6\samples\common;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <CodeGeneration>compute_86,sm_86</CodeGeneration>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\Projects\trt_pose-master\trt_pose\parse\connect_parts.hpp" />
+    <ClInclude Include="E:\Projects\trt_pose-master\trt_pose\parse\find_peaks.hpp" />
+    <ClInclude Include="E:\Projects\trt_pose-master\trt_pose\parse\munkres.hpp" />
+    <ClInclude Include="E:\Projects\trt_pose-master\trt_pose\parse\paf_score_graph.hpp" />
+    <ClInclude Include="E:\Projects\trt_pose-master\trt_pose\parse\refine_peaks.hpp" />
+    <ClInclude Include="E:\Projects\trt_pose-master\trt_pose\parse\utils\CoverTable.hpp" />
+    <ClInclude Include="E:\Projects\trt_pose-master\trt_pose\parse\utils\PairGraph.hpp" />
+    <ClInclude Include="logger.h" />
+    <ClInclude Include="logging.h" />
+    <ClInclude Include="Openpose.h" />
+    <ClInclude Include="parse\connect_parts.hpp" />
+    <ClInclude Include="parse\find_peaks.hpp" />
+    <ClInclude Include="parse\munkres.hpp" />
+    <ClInclude Include="parse\paf_score_graph.hpp" />
+    <ClInclude Include="parse\refine_peaks.hpp" />
+    <ClInclude Include="parse\utils\CoverTable.hpp" />
+    <ClInclude Include="parse\utils\PairGraph.hpp" />
+    <ClInclude Include="headers\PluginFactory.h" />
+    <ClInclude Include="headers\TrtNetwork.h" />
+    <ClInclude Include="headers\UpsampleLayer.h" />
+    <ClInclude Include="headers\YoloLayer.h" />
+    <ClInclude Include="resize.h" />
+    <ClInclude Include="TensorrtPoseNet.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="E:\Projects\trt_pose-master\trt_pose\parse\connect_parts.cpp" />
+    <ClCompile Include="E:\Projects\trt_pose-master\trt_pose\parse\find_peaks.cpp" />
+    <ClCompile Include="E:\Projects\trt_pose-master\trt_pose\parse\munkres.cpp" />
+    <ClCompile Include="E:\Projects\trt_pose-master\trt_pose\parse\paf_score_graph.cpp" />
+    <ClCompile Include="E:\Projects\trt_pose-master\trt_pose\parse\refine_peaks.cpp" />
+    <ClCompile Include="logger.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Openpose.cpp" />
+    <ClCompile Include="parse\connect_parts.cpp" />
+    <ClCompile Include="parse\find_peaks.cpp" />
+    <ClCompile Include="parse\munkres.cpp" />
+    <ClCompile Include="parse\paf_score_graph.cpp" />
+    <ClCompile Include="parse\refine_peaks.cpp" />
+    <ClCompile Include="TensorrtPoseNet.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="resize.cu" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 11.1.targets" />
+  </ImportGroup>
+</Project>

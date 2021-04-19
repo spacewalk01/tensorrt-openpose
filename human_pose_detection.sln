@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "trt_demo", "trt_demo\trt_demo.vcxproj", "{D3D92279-3D3E-44AD-9E0B-4BAFD1FF65A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D3D92279-3D3E-44AD-9E0B-4BAFD1FF65A1}.Debug|x64.ActiveCfg = Debug|x64
+		{D3D92279-3D3E-44AD-9E0B-4BAFD1FF65A1}.Debug|x64.Build.0 = Debug|x64
+		{D3D92279-3D3E-44AD-9E0B-4BAFD1FF65A1}.Debug|x86.ActiveCfg = Debug|Win32
+		{D3D92279-3D3E-44AD-9E0B-4BAFD1FF65A1}.Debug|x86.Build.0 = Debug|Win32
+		{D3D92279-3D3E-44AD-9E0B-4BAFD1FF65A1}.Release|x64.ActiveCfg = Release|x64
+		{D3D92279-3D3E-44AD-9E0B-4BAFD1FF65A1}.Release|x64.Build.0 = Release|x64
+		{D3D92279-3D3E-44AD-9E0B-4BAFD1FF65A1}.Release|x86.ActiveCfg = Release|Win32
+		{D3D92279-3D3E-44AD-9E0B-4BAFD1FF65A1}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B581965C-0FEF-4454-B7E8-D68D80080CD5}
+	EndGlobalSection
+EndGlobal
