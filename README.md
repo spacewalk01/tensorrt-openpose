@@ -23,7 +23,7 @@ pip3 install torch==1.8.1+cu111 torchvision==0.9.1+cu111 torchaudio===0.8.1 -f h
 - Download the [TensorRT](https://developer.nvidia.com/nvidia-tensorrt-download) zip file that matches your Windows version.
 - Install TensorRT by copying the DLL files from <tensorrt_path>/lib to your CUDA installation directory. For more information, refer to [TensorRT installation guideline](https://docs.nvidia.com/deeplearning/tensorrt/install-guide/index.html).
 ```
-move <TensorRT_Installpath>/lib/*.dll C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.1\bin
+move <TensorRT_Installpath>/lib/*.dll "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.1/bin"
 ```
 
 - Install [trt_pose](https://github.com/NVIDIA-AI-IOT/trt_pose) for parsing the trained pytorch model to an onnx graph model. For more information, refer to [trt_pose installation guide](https://github.com/haotian-liu/yolact_edge/blob/master/INSTALL.md).
