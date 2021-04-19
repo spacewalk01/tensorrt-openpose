@@ -1,9 +1,8 @@
 # Human pose detection 
+This repo provides an implementation for human pose detection system based on TensorRT framework that runs on Windows Machine. It is based on pose detection program [1] developed by NVIDIA. Pose detection model runs at up to about 500fps on RTX-3070 GPU with 224x224 ResNet input size.
 
 ![example-gif-1](results/test1.gif)
 ![example-gif-2](results/test2.gif)
-
-This repo provides an implementation for human pose detection system based on TensorRT framework that runs on Windows Machine. It is based on pose detection program [1] developed by NVIDIA. Pose detection model runs at up to about 500fps on RTX-3070 GPU with 224x224 ResNet input size.
 
 ## Requirements
 - Windows 10
