@@ -5,7 +5,7 @@ This repo provides an implementation for human pose detection system based on Te
 ![example-gif-2](results/test2.gif)
 
 ## Requirements
-The following environment was set for the experiment but if you have a different GPU version, you need to download and install TensorRT / CUDA that matches your GPU version.
+The following environment was set for the experiment but if you have a different Graphic Card, you need to download and install TensorRT / CUDA that matches your GPU version.
 - Windows 10
 - Visual Studio 2017
 - RTX 3070 GPU
