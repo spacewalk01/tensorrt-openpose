@@ -70,6 +70,8 @@ void Openpose::detect(std::vector<float> cmap_vector, std::vector<float> paf_vec
 	 
 	trt_pose::parse::assignment_out_nk(connections_ptr, score_graph_ptr, topology, peak_counts_ptr, N, C, K, M, link_threshold, workspace);
 	
+	free(workspace);
+
 	// 5. Merging
 	
 	std::vector<int> objects;
@@ -88,6 +90,7 @@ void Openpose::detect(std::vector<float> cmap_vector, std::vector<float> paf_vec
 
 	trt_pose::parse::connect_parts_out_batch(object_counts_ptr, objects_ptr, connections_ptr, topology, peak_counts_ptr, N, K, C, M, max_num_objects, merge_workspace);
 	
+	free(merge_workspace);
 
 	// ****** DRAWING SKELETON ***** //
 	
