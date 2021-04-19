@@ -34,7 +34,7 @@ git clone https://github.com/batselem/Human_pose_detection
 cd Human_pose_detection
 ```
 - Download a pretrained resnet model, [resnet18_baseline_att_224x224_A](https://drive.google.com/file/d/1XYDdCUdiF2xxx4rznmLb62SdOUZuoNbd/view) and put it in the current project folder.
-- Create an onnx model from pth and convert it to an inference engine   
+- Create an onnx model, optimize the model using TensorRT and build a runtime inference engine.
 ```
 python convert2onnx.py -i resnet18_baseline_att_224x224_A_epoch_249.pth -o trt_pose.onnx
 <tensorrt_path>/bin/trtexec.exe --onnx=trt_pose.onnx --explicitBatch --saveEngine=trt_pose_fp16.engine --fp16
