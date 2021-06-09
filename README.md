@@ -1,4 +1,4 @@
-# Human Pose Detection, OpenPose for Windows (Visual Studio)
+# Human Pose Detection, TensorRT implementation of OpenPose for Windows (Visual Studio)
 This repo provides C++ implementation for OpenPose, human pose detection algorithm based on TensorRT framework that runs on Windows Machine. It is based on [pose detection](https://github.com/NVIDIA-AI-IOT/trt_pose) program developed by NVIDIA. Pose detection model runs at up to about 500 FPS on RTX-3070 GPU with 224x224 ResNet input size. 
 
 ![example-gif-1](results/test1.gif)
