@@ -13,6 +13,7 @@ The following environment was set for the experiment but if you have a different
 - CUDA 11.1, Cudnn 8
 - Python 3.7
 - Torch 1.8.1
+- opencv 4.5.1
 
 ## Installation
 - Install PyTorch 
@@ -25,7 +26,7 @@ pip3 install torch==1.8.1+cu111 torchvision==0.9.1+cu111 torchaudio===0.8.1 -f h
 ```
 move <TensorRT_Installpath>/lib/*.dll "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.1/bin"
 ```
-
+- Install [OpenCV](https://haroonshakeel.medium.com/build-opencv-4-4-0-with-cuda-gpu-support-on-windows-10-without-tears-aa85d470bcd0)
 - Install [trt_pose](https://github.com/NVIDIA-AI-IOT/trt_pose) for parsing the trained pytorch model to an onnx graph model. For more information, refer to [trt_pose installation guide](https://github.com/haotian-liu/yolact_edge/blob/master/INSTALL.md).
 ```
 git clone https://github.com/NVIDIA-AI-IOT/trt_pose
