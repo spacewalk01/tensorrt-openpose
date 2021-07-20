@@ -13,7 +13,7 @@ The following environment was set for the experiment but if you have a different
 - CUDA 11.1, Cudnn 8
 - Python 3.7
 - Torch 1.8.1
-- opencv 4.5.1
+- OpenCV 4.5.1 with CUDA
 
 ## Installation
 - Install PyTorch 
