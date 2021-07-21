@@ -21,7 +21,7 @@ The following environment was set for the experiment but if you have a different
 pip3 install torch==1.8.1+cu111 torchvision==0.9.1+cu111 torchaudio===0.8.1 -f https://download.pytorch.org/whl/torch_stable.html
 ```
 - Download and install [CUDA](https://developer.nvidia.com/cuda-11.1.0-download-archive) and [CUDNN](https://developer.nvidia.com/cudnn) by following this [installation guide](https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html).
-- Install [OpenCV 4.5.1 or 4.5.0](https://haroonshakeel.medium.com/build-opencv-4-4-0-with-cuda-gpu-support-on-windows-10-without-tears-aa85d470bcd0)
+- Install [OpenCV 4.5.1 or 4.5.0]
 - Download the [TensorRT](https://developer.nvidia.com/nvidia-tensorrt-download) zip file that matches your Windows version.
 - Install TensorRT by copying the DLL files from <tensorrt_path>/lib to your CUDA installation directory. For more information, refer to [TensorRT installation guideline](https://docs.nvidia.com/deeplearning/tensorrt/install-guide/index.html).
 ```
