@@ -46,7 +46,8 @@ python convert2onnx.py -i resnet18_baseline_att_224x224_A_epoch_249.pth -o trt_p
 <tensorrt_path>/bin/trtexec.exe --onnx=trt_pose.onnx --explicitBatch --saveEngine=trt_pose_fp16.engine --fp16
 ```
 - Open the solution with Visual Studio. Select `x64` and `Release` for the configuration and start building the project. 
-
+## Training
+For training a larger model, you may refer to [link](https://docs.nvidia.com/isaac/isaac/packages/skeleton_pose_estimation/doc/2Dskeleton_pose_estimation.html)
 ## References
   - https://github.com/NVIDIA-AI-IOT/trt_pose - Real-time pose estimation (Python and C++)
   - https://github.com/CaoWGG/TensorRT-YOLOv4 - Object detection based on Tensorrt (C++)
