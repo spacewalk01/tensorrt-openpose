@@ -58,26 +58,27 @@ python convert2onnx.py -i resnet18_baseline_att_224x224_A_epoch_249.pth -o trt_p
 
 int main() {
 
-    std::string filepath="images/image.png";
+    std::string filepath = "image.png";
    
     // Initialize pose network
-	TensorrtPoseNet posenet("trt_pose_fp16.engine", 0.9, 0.1);
-	
-	// Initialize OpenPose parser
-	Openpose openpose(posenet.outputDims[0]);
+    TensorrtPoseNet posenet("trt_pose_fp16.engine", 0.9, 0.1);
+    
+    // Initialize openpose parser
+    Openpose openpose(posenet.outputDims[0]);
 
     cv::Mat img = cv::imread(filepath);
 
-    // Resnet predicts candidate points as heatmaps and stores them in cmap and paf buffers
+    // Resnet predicts keypoints as a heatmap and stores them in cmap and paf buffers
     net.infer(img);  
 
-    // Openpose algorithm finds connections between the points from the buffers
+    // Openpose algorithm infers connections between keypoints to predict poses
     openpose.detect(posenet.cpuCmapBuffer, posenet.cpuPafBuffer, img); 
     cv::imshow("Result", img);
     cv::waitKey(0);
       
     return 0;
 }
+
 ```
 ## Training
 - For training a larger model, you may refer to [link](https://docs.nvidia.com/isaac/isaac/packages/skeleton_pose_estimation/doc/2Dskeleton_pose_estimation.html)
