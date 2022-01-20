@@ -66,14 +66,15 @@ int main() {
     // Initialize openpose parser
     Openpose openpose(posenet.outputDims[0]);
 
-    cv::Mat img = cv::imread(filepath);
+    cv::Mat image = cv::imread(filepath);
 
-    // Resnet predicts keypoints as a heatmap and stores them in cmap and paf buffers
-    net.infer(img);  
+    // First, resnet predicts a heatmap for each keypoint on the image and possible connections between them
+    net.infer(image);  
 
-    // Openpose algorithm infers connections between keypoints to predict poses
-    openpose.detect(posenet.cpuCmapBuffer, posenet.cpuPafBuffer, img); 
-    cv::imshow("Result", img);
+    // Openpose algorithm groups keypoints to estimate a skeleton pose for each person
+    openpose.detect(posenet.cpuCmapBuffer, posenet.cpuPafBuffer, image); 
+    
+    cv::imshow("Result", image);
     cv::waitKey(0);
       
     return 0;
