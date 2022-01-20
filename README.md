@@ -68,10 +68,10 @@ int main() {
 
     cv::Mat image = cv::imread(filepath);
 
-    // First, resnet predicts a heatmap for each keypoint on the image and possible connections between them
+    // First, openpose uses a resnet to predict a heatmap for each keypoint on the image
     net.infer(image);  
 
-    // Openpose algorithm groups keypoints to estimate a skeleton pose for each person
+    // Then, it groups the keypoints to estimate a skeleton pose for each person
     openpose.detect(posenet.cpuCmapBuffer, posenet.cpuPafBuffer, image); 
     
     cv::imshow("Result", image);
