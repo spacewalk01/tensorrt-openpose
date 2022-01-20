@@ -46,6 +46,39 @@ python convert2onnx.py -i resnet18_baseline_att_224x224_A_epoch_249.pth -o trt_p
 <tensorrt_path>/bin/trtexec.exe --onnx=trt_pose.onnx --explicitBatch --saveEngine=trt_pose_fp16.engine --fp16
 ```
 - Open the solution with Visual Studio. Select `x64` and `Release` for the configuration and start building the project. 
+
+## Usage
+```
+#include <opencv2/core.hpp>
+#include "opencv2/imgcodecs.hpp"
+#include "opencv2/highgui.hpp"
+#include "opencv2/imgproc.hpp"
+#include "Openpose.h"
+#include "TensorrtPoseNet.h"
+
+int main() {
+
+    std::string filepath="images/image.png";
+   
+    // Initialize pose network
+	TensorrtPoseNet posenet("trt_pose_fp16.engine", 0.9, 0.1);
+	
+	// Initialize OpenPose parser
+	Openpose openpose(posenet.outputDims[0]);
+
+    cv::Mat img = cv::imread(filepath);
+
+    // Resnet predicts candidate points as heatmaps and stores them in cmap and paf buffers
+    net.infer(img);  
+
+    // Openpose algorithm finds connections between the points from the buffers
+    openpose.detect(posenet.cpuCmapBuffer, posenet.cpuPafBuffer, img); 
+    cv::imshow("Result", img);
+    cv::waitKey(0);
+      
+    return 0;
+}
+```
 ## Training
 - For training a larger model, you may refer to [link](https://docs.nvidia.com/isaac/isaac/packages/skeleton_pose_estimation/doc/2Dskeleton_pose_estimation.html)
 ## References
