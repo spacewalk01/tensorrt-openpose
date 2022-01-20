@@ -58,7 +58,7 @@ python convert2onnx.py -i resnet18_baseline_att_224x224_A_epoch_249.pth -o trt_p
 
 int main() {
 
-    std::string filepath = "image.png";
+    std::string filepath = "your image path";
    
     // Initialize pose network
     TensorrtPoseNet posenet("trt_pose_fp16.engine", 0.9, 0.1);
