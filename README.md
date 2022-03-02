@@ -3,7 +3,9 @@ This repo provides a C++ implementation of OpenPose for building real-time pose 
 
 ![example-gif-1](results/test1.gif)
 ![example-gif-2](results/test2.gif)
+<br />
 [![GitHub issues-closed](https://img.shields.io/github/issues-closed/Naereen/StrapDown.js.svg)](https://GitHub.com/Naereen/StrapDown.js/issues?q=is%3Aissue+is%3Aclosed)
+[![GitHub issues](https://img.shields.io/github/issues/Naereen/StrapDown.js.svg)](https://GitHub.com/Naereen/StrapDown.js/issues/)
 
 ## Requirements
 The following environment was set for the experiment but if you have a different Graphic Card, you need to download and install TensorRT / CUDA that matches your GPU version.
