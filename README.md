@@ -1,5 +1,5 @@
 # TensorRT Implementation of OpenPose
-This repo provides a C++ implementation of OpenPose for building real-time pose estimation applications on Windows platform. It is based on [pose detection](https://github.com/NVIDIA-AI-IOT/trt_pose) program developed by NVIDIA and performs pose estimation on TensorRT framework with a high throughtput. The pose estimation program runs at up to 500 FPS on RTX-3070 GPU using 224x224 ResNet18. 
+This repo provides the C++ implementation of OpenPose for doing real-time pose estimation on Windows platform. It is based on [pose detection](https://github.com/NVIDIA-AI-IOT/trt_pose) program developed by NVIDIA and performs pose estimation on TensorRT framework with a high throughtput. The pose estimation program runs at up to 500 FPS on RTX-3070 GPU using 224x224 ResNet18. 
 
 ![example-gif-1](results/test1.gif)
 ![example-gif-2](results/test2.gif)
